@@ -19,6 +19,7 @@ enum {
 };
 
 typedef struct {
+    double n;
     zson_type type;
 } zson_value;
 
@@ -29,6 +30,5 @@ typedef struct {
 int zson_parse(zson_value* z, const char* json);
 
 zson_type zson_get_type(const zson_value* z);
-static void zson_parse_whitespace(zson_context* context);
 
 #endif

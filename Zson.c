@@ -2,7 +2,9 @@
 #include <assert.h>
 #include "Zson.h"
 
-#define EXPECT(c, ch) do {assert(*c->json == (ch)); c->json++; } while(0)    
+#define EXPECT(c, ch) do {assert(*c->json == (ch)); c->json++; } while(0) 
+
+static void zson_parse_whitespace(zson_context* context);
 
 static void zson_parse_whitespace(zson_context* context) {
     const char* p = context->json;
